@@ -173,8 +173,7 @@ php delimiter.source, php delimiter.source > keyword.definition {
 	font-weight: bold;
 }
 
-php keyword.definition, php keyword.function,
-php > keyword.definition {
+php keyword.definition, php > keyword.definition {
 	color: #268bd2;
 }
 
@@ -190,6 +189,10 @@ php integer.numeric {
 
 php > variable, php string.double > variable {
 	color: #6c71c4; /* why does this affect function call names? */
+}
+
+php > variable.function, php keyword.function {
+	color: #586e75;
 }
 
 php keyword.constant.other {

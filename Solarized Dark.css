@@ -173,8 +173,7 @@ php delimiter.source, php delimiter.source > keyword.definition {
 	font-weight: bold;
 }
 
-php keyword.definition, php keyword.function,
-php > keyword.definition {
+php keyword.definition, php > keyword.definition {
 	color: #268bd2;
 }
 
@@ -207,6 +206,10 @@ php identifier.function > name, php literal.keyword {
 
 php identifier.function {
 	color: #cb4b16;
+}
+
+php > variable.function, php keyword.function {
+	color: #657b83;
 }
 
 php name, php function > name, php function {
