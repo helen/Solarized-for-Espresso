@@ -1,0 +1,252 @@
+/*
+  @theme Solarized Light
+  @override-placeholders css, php, php-html
+  @author Helen Hou-Sandi
+*/
+ 
+@base {
+	color: #333;
+	background-color: #f9f9f9;
+	insertion-point-color: #000;
+	selection-background-color: default;
+}
+
+/* @group Generic */
+
+tag, source, sourcecode {
+	spell-check: disabled;
+}
+
+comment {
+	color: #93a1a1;
+	font-style: italic;
+}
+
+string.quoted {
+	color: #859900;
+}
+
+constant.numeric, literal.numeric, literal.character, literal.keyword {
+	color: #cb4b16;
+}
+
+storage.type {
+	color: #6c71c4;
+}
+
+keyword.control, keyword.modifier,
+keyword.constant, identifier.constant, keyword.definition,
+language.constant {
+	color: #268bc2;
+}
+
+operator {
+	color: #586e75;
+	background: #f5f5f5;
+}
+
+invalid {
+	color: #dc322f;
+	background: rgba(150, 0, 0, .08);
+}
+
+/* @end */
+
+/* @group HTML */
+
+tag {
+	color: #268bd2;
+}
+
+entity.name, tag > name {
+	color: #268bd2;
+	background: #f5f5f5;
+	font-weight: normal;
+}
+
+/* Deprecated elements */
+entity.name[text='applet'],
+entity.name[text='basefont'],
+entity.name[text='center'],
+entity.name[text='dir'],
+entity.name[text='font'],
+entity.name[text='isindex'],
+entity.name[text='menu'],
+entity.name[text='s'],
+entity.name[text='strike'],
+entity.name[text='u'] {
+	background: rgba(150, 0, 0, .08);
+}
+
+entity.character {
+	color: #cb4b16;
+}
+
+attribute-name {
+	color: #2aa198;
+	font-style: italic;
+}
+
+tag.doctype, tag.doctype entity.name {
+	color: #93a1a1;
+}
+
+/* @end */
+ 
+/* @group CSS */
+
+css {
+	spell-check: disabled;
+}
+
+css punctuation,
+css property-value > punctuation.separator.css,
+css property-value > punctuation.terminator.rule.css {
+	color: #333;
+}
+
+css > property-name {
+	color: #d33682;
+}
+
+css property-value {
+	color: #b58900;
+}
+
+css.selector, css.selector > entity > punctuation {
+	color: #6c71c4;
+}
+
+css keyword.important, keyword.important.css {
+	font-weight: bold;
+}
+
+css comment punctunation,
+css comment.block.css,
+css comment punctuation.begin,
+css comment punctuation.end {
+	color: #93a1a1;
+}
+
+css color,
+css punctuation.definition.constant,
+css group-start.comment.block.css,
+css group-end.comment.block.css {
+	color: #2aa198;
+}
+
+css .group-start .name {
+	color: #859900;
+	font-weight: bold;
+}
+
+embedded.styling.css, embedded.property-list.css {
+	background: #EFE8F3;
+}
+
+/* @end */
+
+/* @group Javascript */
+
+js.embedded {
+	background: #f3f3f3;
+}
+
+js keyword.operator.new, js variable.language {
+	color: #6c71c4;
+}
+
+js meta, js parameters.begin, js parameters.end, js punctuation.terminator {
+	color: #586e75;
+}
+
+js entity.name {
+	color: #333;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group PHP */
+
+php delimiter.source, php delimiter.source > keyword.definition {
+	color: #dc322f;
+	font-weight: bold;
+}
+
+php keyword.definition, php keyword.function,
+php > keyword.definition {
+	color: #268bd2;
+}
+
+php modifier, php keyword.constant.class,
+php keyword.modifier {
+	color: #cb4b16;
+}
+
+php integer.numeric {
+	color: #cb4b16;
+	background-color: #E6EBF2;
+}
+
+php > variable, php string.double > variable {
+	color: #d33682; /* why does this affect function call names? */
+}
+
+php keyword.constant.other {
+	color: #268bd2;
+}
+
+php operator.pointer, php delimiter.pointer {
+	color: #657b83;
+}
+
+php identifier.function > name, php literal.keyword {
+	color: #6c71c4;
+	font-weight: normal;
+}
+
+php identifier.function {
+	color: #d33682;
+}
+
+php class name, php name, php function > name, php function {
+	color: #6c71c4;
+	font-weight: bold;
+}
+
+php literal.keyword.bool, php literal.keyword.null {
+	color: #b58900;
+}
+
+php identifier.function parenthesis, php identifier.function square-brace, php identifier.function comma {
+	color: #333;
+}
+
+container.block.embedded.source.php {
+	background: #E6EBF2;
+}
+
+php variable operator, php function variable, php block variable {
+	color:  #6c71c4;
+}
+
+php if function parenthesis, php elseif function parenthesis,
+php while function parenthesis, php switch function parenthesis,
+php for function parenthesis, php foreach function parenthesis {
+	color: #555;
+}
+
+php block function function parenthesis {
+	color: #777;
+}
+
+php class.static class.name {
+	color: #2aa198;
+}
+
+php class.static property.name {
+    color: #6c71c4;
+}
+
+/* @end */
