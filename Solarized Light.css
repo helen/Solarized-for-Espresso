@@ -1,12 +1,12 @@
 /*
   @theme Solarized Light
-  @override-placeholders css, php, php-html
+  @override-placeholders css, php, php-html, markdown
   @author Helen Hou-Sandi
 */
  
 @base {
 	color: #333;
-	background-color: #f9f9f9;
+	background-color: #fdf6e3;
 	insertion-point-color: #000;
 	selection-background-color: default;
 }
@@ -23,7 +23,7 @@ comment {
 }
 
 string.quoted {
-	color: #859900;
+	color: #d33682;
 }
 
 constant.numeric, literal.numeric, literal.character, literal.keyword {
@@ -31,7 +31,7 @@ constant.numeric, literal.numeric, literal.character, literal.keyword {
 }
 
 storage.type {
-	color: #6c71c4;
+	color: #859900;
 }
 
 keyword.control, keyword.modifier,
@@ -42,7 +42,7 @@ language.constant {
 
 operator {
 	color: #586e75;
-	background: #f5f5f5;
+	background: #eee8d5;
 }
 
 invalid {
@@ -60,7 +60,6 @@ tag {
 
 entity.name, tag > name {
 	color: #268bd2;
-	background: #f5f5f5;
 	font-weight: normal;
 }
 
@@ -141,7 +140,7 @@ css .group-start .name {
 }
 
 embedded.styling.css, embedded.property-list.css {
-	background: #EFE8F3;
+	background: #eee8d5;
 }
 
 /* @end */
@@ -149,7 +148,7 @@ embedded.styling.css, embedded.property-list.css {
 /* @group Javascript */
 
 js.embedded {
-	background: #f3f3f3;
+	background: #eee8d5;
 }
 
 js keyword.operator.new, js variable.language {
@@ -181,16 +180,16 @@ php > keyword.definition {
 
 php modifier, php keyword.constant.class,
 php keyword.modifier {
-	color: #cb4b16;
+	color: #2aa198;
 }
 
 php integer.numeric {
 	color: #cb4b16;
-	background-color: #E6EBF2;
+	background-color: #eee8d5;
 }
 
 php > variable, php string.double > variable {
-	color: #d33682; /* why does this affect function call names? */
+	color: #6c71c4; /* why does this affect function call names? */
 }
 
 php keyword.constant.other {
@@ -207,12 +206,16 @@ php identifier.function > name, php literal.keyword {
 }
 
 php identifier.function {
-	color: #d33682;
+	color: #cb4b16;
 }
 
-php class name, php name, php function > name, php function {
-	color: #6c71c4;
+php name, php function > name, php function {
+	color: #859900;
 	font-weight: bold;
+}
+
+php class name {
+	color: #2aa198;
 }
 
 php literal.keyword.bool, php literal.keyword.null {
@@ -224,7 +227,7 @@ php identifier.function parenthesis, php identifier.function square-brace, php i
 }
 
 container.block.embedded.source.php {
-	background: #E6EBF2;
+	background: #eee8d5;
 }
 
 php variable operator, php function variable, php block variable {
@@ -234,11 +237,11 @@ php variable operator, php function variable, php block variable {
 php if function parenthesis, php elseif function parenthesis,
 php while function parenthesis, php switch function parenthesis,
 php for function parenthesis, php foreach function parenthesis {
-	color: #555;
+	color: #586e75;
 }
 
 php block function function parenthesis {
-	color: #777;
+	color: #657b83;
 }
 
 php class.static class.name {
@@ -246,7 +249,69 @@ php class.static class.name {
 }
 
 php class.static property.name {
-    color: #6c71c4;
+    color: #859900;
+}
+
+/* @end */
+
+/* @group Markdown */
+
+markdown delimiter, markdown separator, markdown metadata {
+	color: #2aa198;
+}
+
+markdown structural.separator {
+	background: #eee8d5;
+}
+
+markdown header {
+	font-weight: bold;
+}
+
+markdown literal.escape {
+	color: #657b83;
+}
+
+markdown weight {
+	font-weight: bold;
+}
+
+markdown slant {
+	font-style: italic;
+}
+
+markdown weight slant, markdown slant weight {
+	font-style: italic;
+	font-weight: bold;
+}
+
+markdown code {
+	color: #6c71c4;
+	background: #eee8d5;
+}
+
+markdown link {
+	color: #d33682;
+}
+
+markdown url, markdown email {
+	color: #268bd2;
+}
+
+markdown literal.title {
+	color: #6c71c4;
+}
+
+markdown keyword.reference {
+	color: #859900;
+}
+
+markdown image {
+	color: #cb4b16;
+}
+
+markdown image delimiter.declarative {
+	font-weight: bold;
 }
 
 /* @end */
