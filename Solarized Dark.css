@@ -22,6 +22,10 @@ comment {
 	font-style: italic;
 }
 
+punctuation {
+	color: #839496;
+}
+
 string.quoted {
 	color: #d33682;
 }
@@ -168,6 +172,10 @@ js entity.name {
 
 /* @group PHP */
 
+php comment > keyword {
+	font-weight: bold;
+}
+
 php delimiter.source, php delimiter.source > keyword.definition {
 	color: #dc322f;
 	font-weight: bold;
@@ -182,13 +190,21 @@ php keyword.modifier {
 	color: #2aa198;
 }
 
+php constant {
+	color: #b58900;
+}
+
+php boolean, php null {
+	font-weight: bold;
+}
+
 php integer.numeric {
 	color: #cb4b16;
 	background-color: #073642;
 }
 
 php > variable, php string.double > variable {
-	color: #6c71c4; /* why does this affect function call names? */
+	color: #6c71c4;
 }
 
 php keyword.constant.other {
@@ -209,7 +225,7 @@ php identifier.function {
 }
 
 php > variable.function, php keyword.function {
-	color: #657b83;
+	color: #839496;
 }
 
 php name, php function > name, php function {
