@@ -203,7 +203,7 @@ php integer.numeric {
 	background-color: #073642;
 }
 
-php > variable, php string.double > variable {
+php variable, php string.double > variable {
 	color: #6c71c4;
 }
 
@@ -224,7 +224,7 @@ php identifier.function {
 	color: #cb4b16;
 }
 
-php > variable.function, php keyword.function {
+php variable.function, php keyword.function {
 	color: #839496;
 }
 
